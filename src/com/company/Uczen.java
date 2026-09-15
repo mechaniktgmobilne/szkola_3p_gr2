@@ -1,6 +1,6 @@
 package com.company;
 
-public class Uczen extends  Osoba{
+public class Uczen extends  Osoba implements Dyzurny{
 
     //dziedziczenie
     //klasa Uczen jest klasą potomną dla klasy Osoba
@@ -26,5 +26,10 @@ public class Uczen extends  Osoba{
                 " wiek: "+getWiek()+
                 " nrUcznia=" + nrUcznia +
                 '}';
+    }
+
+    @Override
+    public void wykonajDyzur() {
+        System.out.println("Podlewanie kwiatów");
     }
 }

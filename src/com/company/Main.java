@@ -9,7 +9,9 @@ public class Main {
         Uczen uczen = new Uczen("Małgosia",7);
         System.out.println(osoba);
         System.out.println(uczen);//wywołanie toString
+        uczen.wykonajDyzur();
         Nauczyciel nauczyciel = new Nauczyciel("Joanna","muzyka");
         System.out.println(nauczyciel);
+        nauczyciel.wykonajDyzur();
     }
 }
