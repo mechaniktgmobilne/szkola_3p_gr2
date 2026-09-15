@@ -25,5 +25,6 @@ public class Main {
         klasa1p.dodajUczniaDoKlasy(uczen3);
         klasa1p.dodajUczniaDoKlasy(uczen4);
         System.out.println(klasa1p);
+        klasa1p.wypiszInfoOKlasie();
     }
 }

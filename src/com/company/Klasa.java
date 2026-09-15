@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.SortedMap;
 
 public class Klasa {
     private String nazwa;
@@ -35,7 +36,11 @@ public class Klasa {
     }
     //to string -> wypisanie wszystkich uczniów w klasie
     public void wypiszInfoOKlasie(){
-
+        System.out.println("Klasa: "+nazwa);
+        System.out.println("Wychowawca "+wychowawca);
+        for (Uczen uczen:uczniowie) {
+            System.out.println("- "+uczen);
+        }
     }
 
     @Override
