@@ -26,5 +26,8 @@ public class Main {
         klasa1p.dodajUczniaDoKlasy(uczen4);
         System.out.println(klasa1p);
         klasa1p.wypiszInfoOKlasie();
+        Szkola mechanikTG = Szkola.getSzkola("Zespoł Szkoł Politechnicznych");
+        mechanikTG = Szkola.getSzkola("fhasgf");
+        System.out.println(mechanikTG);
     }
 }
