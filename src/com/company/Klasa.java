@@ -14,6 +14,22 @@ public class Klasa {
         uczniowie = new ArrayList<>();
     }
 
+    public String getNazwa() {
+        return nazwa;
+    }
+
+    public void setWychowawca(Wychowawca wychowawca) {
+        this.wychowawca = wychowawca;
+    }
+
+    public ArrayList<Uczen> getUczniowie() {
+        return uczniowie;
+    }
+
+    public Wychowawca getWychowawca() {
+        return wychowawca;
+    }
+
     //dodaj ucznia do klasy
     public void dodajUczniaDoKlasy(Uczen uczen){
         if(uczniowie.contains(uczen)){

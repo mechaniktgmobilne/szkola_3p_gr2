@@ -29,4 +29,43 @@ public class Szkola {
                 "nazwa='" + nazwa + '\'' +
                 '}';
     }
+
+    public void dodajUczniaDoSzkoly (String imie, int wiek){
+        //tworzymy ucznia i dadajemy do listy
+        Uczen uczen = new Uczen(imie,wiek);
+        uczniowie.add(uczen);
+    }
+    public void dodajUczniaDoKlasy(Uczen uczen, Klasa klasa){
+        klasa.dodajUczniaDoKlasy(uczen);
+    }
+    public void przepiszUczniaMiedzyKlasami(Uczen uczen, Klasa klasaZ, Klasa klasaDo){
+        if(!klasaZ.equals(klasaDo)) {
+            klasaZ.usunUczniaZKlasy(uczen);
+            klasaDo.dodajUczniaDoKlasy(uczen);
+        }
+    }
+    public void wypiszNaEkranieUczniowZKlasy(Klasa klasa){
+
+    }
+    public void dodajNauczyciela(Nauczyciel nauczyciel){
+
+    }
+    public void dodajKlase(String nazwa){
+
+    }
+    public void przypiszWychowawce(Wychowawca wychowawca, Klasa klasa){
+        //przypisz Wychowawce do klasy jezeli ten wychowawca nie jest jeszcze w żadnej klasie
+        boolean czyMaKlase = false;
+        for (Klasa klasa:klasy) {
+            if(klasa.getWychowawca() == wychowawca){
+                czyMaKlase = true;
+                break;
+            }
+        }
+        if (!czyMaKlase) {
+            klasa.setWychowawca(wychowawca);
+        }
+    }
+
+
 }
